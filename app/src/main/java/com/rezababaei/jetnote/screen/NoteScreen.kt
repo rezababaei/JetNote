@@ -30,6 +30,7 @@ import com.rezababaei.jetnote.components.NoteButton
 import com.rezababaei.jetnote.components.NoteInputText
 import com.rezababaei.jetnote.data.NotesDataSource
 import com.rezababaei.jetnote.model.Note
+import com.rezababaei.jetnote.util.formatDate
 import kotlinx.coroutines.GlobalScope
 import java.time.format.DateTimeFormatter
 
@@ -121,8 +122,8 @@ fun NoteRow(
             horizontalAlignment = Alignment.Start) {
             Text(text = note.title, style = MaterialTheme.typography.subtitle2)
             Text(text = note.description, style = MaterialTheme.typography.subtitle1)
-//            Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE,d MMM ")),
-//                style = MaterialTheme.typography.caption)
+            Text(text = formatDate(note.entryDate.time),
+                style = MaterialTheme.typography.caption)
 
         }
 

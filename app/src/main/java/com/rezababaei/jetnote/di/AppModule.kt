@@ -32,7 +32,5 @@ object AppModule {
             "notes_db")
             .fallbackToDestructiveMigration()
             .build()
-
-
 }
 

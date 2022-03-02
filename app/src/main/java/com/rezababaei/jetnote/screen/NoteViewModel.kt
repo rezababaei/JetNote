@@ -6,7 +6,6 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import com.rezababaei.jetnote.data.NotesDataSource
 import com.rezababaei.jetnote.model.Note
-
 @RequiresApi(Build.VERSION_CODES.O)
 class NoteViewModel : ViewModel() {
 

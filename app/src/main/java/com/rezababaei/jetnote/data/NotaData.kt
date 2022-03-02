@@ -3,10 +3,9 @@ package com.rezababaei.jetnote.data
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.rezababaei.jetnote.model.Note
-
+@RequiresApi(Build.VERSION_CODES.O)
 class NotesDataSource {
 
-    @RequiresApi(Build.VERSION_CODES.O)
     fun loadNotes(): List<Note> {
         return listOf(
             Note(title = "A Good Day", description = "We went on a vacation by the lake"),

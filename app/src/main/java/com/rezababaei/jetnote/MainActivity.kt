@@ -21,9 +21,10 @@ import com.rezababaei.jetnote.model.Note
 import com.rezababaei.jetnote.screen.NoteScreen
 import com.rezababaei.jetnote.screen.NoteViewModel
 import com.rezababaei.jetnote.ui.theme.JetNoteTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -38,7 +39,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun NotesApp(noteViewModel: NoteViewModel = viewModel()) {
@@ -47,7 +47,6 @@ fun NotesApp(noteViewModel: NoteViewModel = viewModel()) {
         onAddNote = { noteViewModel.addNote(note = it) },
         onRemoveNote = { noteViewModel.removeNote (note = it) })
 }
-
 @RequiresApi(Build.VERSION_CODES.O)
 @Preview(showBackground = true)
 @Composable
